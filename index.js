@@ -88,7 +88,7 @@ app.use('/ping', (req, res) => {
 app.use('/user', userRouter);
 
 const swaggerSpec = swaggerJSDoc(options);
-// app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(function (req, res) {
   res.status(404).json({ error: 'Not found!' });

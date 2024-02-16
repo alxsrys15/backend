@@ -8,7 +8,6 @@ const CreateOrUpdateModel = z.object({
     .max(100, 'Maximum value is 100')
     .default(20),
   sendEmail: z.boolean().default(true),
-  id: z.number().optional(),
 });
 
 function validateCreateOrUpdate(obj) {
